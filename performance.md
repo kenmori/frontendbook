@@ -1,3 +1,41 @@
+### パフォーマンスの把握
+
+harファイル取得
+レコードして
+ファイルソースのところで右クリック
+save har ファイル
+
+HTTP Archive Viewer を入れる
+https://chrome.google.com/webstore/detail/http-archive-viewer/ebbdbdmhegaoooipfnjikefdpeoaidml/related?hl=ja
+
+アドオンにharファイルを読み込ませる
+
+
+
+### Blocking - Time spent in a queue waiting for a network connection.
+接続することへの待ち時間
+
+#### DNS Lookup - DNS resolution time. The time required to resolve a host name.
+名前解決に要した時間
+
+#### Connecting - Time required to create TCP connection.
+接続するためにTCPを作る時間
+
+#### Sending - Time required to send HTTP request to the server.
+サーバーへのHTTPリクエスト時間
+
+#### Waiting - Waiting for a response from the server.
+サーバーからのレスポンスを待った時間
+
+#### Receiving - Time required to read entire response from the server (or cache).
+サーバーからのレスポンスの読み込みにかかった時間
+
+
+
+
+
+
+
 ### ブラウザの仕事
 
 →HMTL、CSS、JSファイルを取り込み画面上にピクセルをレンダリングさせること
@@ -39,7 +77,7 @@
 
 4.DOMツリーを構築
 
-→ScriptExcution(スクリプトがあればパースをやめるてInputStreamに戻る)。
+→ScriptExcution(スクリプトがあればパースをやめてInputStreamに戻る)。
 
 http://qiita.com/mamo/items/ff336b5cc0a1a95e03a7
 
@@ -69,7 +107,8 @@ DOMContentLoaded・・・HTML5で定義。$(document).ready()と同じでツリ�
 
 違いはJquery(古いブラウザバージョンに対応するためDOMcontentLoadを使わないready判定をした)かHTML5か。
 
-最初のHTMLドキュメントの読み込みと解析が完了した時点で発火。stylesheetや画像、サブフレームの読み込みが終わるのを待ちません
+最初のHTMLドキュメントの読み込みと解析が完了した時点で発火。
+stylesheetや画像、サブフレームの読み込みが終わるのを待ちません
 
 正しい時にコードを実行する(Running Your Coad at the Right Time)
 
